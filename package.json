@@ -1,0 +1,23 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Generated with 11ty and deployed to Netlify.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesTedesco/personal-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesTedesco/personal-website/issues"
+  },
+  "homepage": "https://github.com/JamesTedesco/personal-website#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
