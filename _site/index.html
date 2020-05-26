@@ -11,10 +11,13 @@
 
     <body>
 
-        <html>
+        <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/></head>
+
+<html>
     <body>
         <header class="header-card">
-            <img id="portrait" class="portrait-img" src="/assets/myself.png" alt="A picture of me dressed real snazzy-like.">
+            <img id="portrait" class='portrait-img' src="/assets/myself.png" alt="A picture of me dressed real snazzy-like.">
 
             <div class="general-intro-wrapper">
                 <h1 class="greeting-text">Hi, I'm James!</h1>
@@ -37,7 +40,9 @@
         <script>
             // reveals picture all at once rather than allowing a staggered load.
             let img = document.getElementById('portrait')
-            img.onload = () => img.style.visibility = 'visible'
+            img.onload = () => img
+                .classList
+                .add('visible')
         </script>
     </body>
 </html>
