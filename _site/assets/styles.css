@@ -37,6 +37,11 @@ body {
 
 .intro-text-wrapper {
     text-align: end;
+    line-height: 2.5;
+}
+
+#mobile-portrait {
+    display: none;
 }
 
 .contact-info-wrapper {
@@ -62,11 +67,32 @@ img.visible {
     }
 }
 
-
-@media only screen and (max-width: 610px) {
-    img.portrait-img {
-        display   : none;
-        visibility: hidden;
-        color: green;
+@media only screen and (max-width: 700px) {
+    .header-card {
+        flex-direction: column-reverse;
     }
+
+    .general-intro-wrapper {
+        margin: 0 20;
+    }
+
+    .contact-info-wrapper {
+        margin                 : 0;
+        bottom                 : 0;
+        left                   : 0;
+        position               : absolute;
+        width                  : 100%;
+        background-color       : #ffffffb8;
+        border-top-left-radius : 25px;
+        border-top-right-radius: 25px;
+        padding                : 10px;
+    }
+
+    #portrait {
+        height    : 62vh;
+        width     : auto;
+        margin    : 0 auto;
+        margin-top: auto;
+    }
+
 }
