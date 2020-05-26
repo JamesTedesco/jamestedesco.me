@@ -114,3 +114,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Allow documentation
+README.md
+
+# Content for building cards
+/cards-content/*

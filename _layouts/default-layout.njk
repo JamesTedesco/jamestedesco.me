@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/assets/styles.css">
+        <link rel="stylesheet" href="/assets/materialize.css">
+        <script src="/assets/materialize.js"></script>
+    </head>
+
+    {# Styling home page here #}
+
+    <body>
+
+        {% include "_head.html" %}
+
+        <div class="container">
+
+            <h1>{{title}}</h1>
+            {{content | safe}}
+
+            {# Build cards #}
+            {%- for card in collections.card -%}
+
+                <div class="card blue-grey">{{card.data.title}}</div>
+
+                {% for color in card.data.colors %}
+                    <li>{{ color }}</li>
+                {% endfor %}
+
+            {%- endfor -%}
+        </div>
+    </body>
+</html>
