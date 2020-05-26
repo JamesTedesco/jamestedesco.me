@@ -19,6 +19,7 @@ body {
 .portrait-img {
     height: calc( 100vh - 25px);
     margin-top: 25px;
+    visibility: hidden;
 }
 
 .general-intro-wrapper {
