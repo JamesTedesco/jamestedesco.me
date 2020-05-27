@@ -1,7 +1,13 @@
+@font-face {
+    font-family: "Fira Code";
+    src        : url("assets/FiraCode-VariableFont_wght.ttf") format("wght"),
+}
+
 html,
 body {
     margin: 0;
     height: 100vh;
+    font-family: "Fira Code", sans-serif;
 }
 
 body {
@@ -9,7 +15,7 @@ body {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4em;
 }
 
 h2 {
@@ -35,7 +41,7 @@ p,
     height    : calc(100vh - 25px);
     margin-top: 25px;
     visibility: hidden;
-    filter: drop-shadow(10px 6px 10px rgba(0, 0, 0, .7));
+    filter    : drop-shadow(10px 6px 10px rgba(0, 0, 0, .7));
 }
 
 .general-intro-wrapper {
@@ -108,7 +114,7 @@ img.visible {
 /* bio */
 
 #biography p {
-    line-height: 2em;
+    line-height: 1.2em;
 }
 
 #biography span {
@@ -151,8 +157,8 @@ img.visible {
     }
 
     #portrait {
-        height: auto;
-        width: 18em;
+        height    : auto;
+        width     : 18em;
         margin    : 0 auto;
         margin-top: auto;
     }
@@ -164,6 +170,11 @@ img.visible {
 
     h1 {
         font-size: 3em;
+    }
+
+    .intro-text-wrapper {
+        font-size: 1em;
+        line-height: 1.2em;
     }
 
     h2.section-header {
