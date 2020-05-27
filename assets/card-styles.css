@@ -1,0 +1,39 @@
+.experience-level {
+    background-color: #FF9A36;
+    color           : white;
+    width           : fit-content;
+    font-weight     : bolder;
+    padding         : 10px;
+}
+
+hr {
+    margin    : 0;
+    border-top: 2px dashed black;
+}
+
+ul {
+    margin : 0;
+    padding: 20px;
+}
+
+.technologies-list {
+    display        : flex;
+    justify-content: space-around;
+    flex-wrap      : wrap;
+}
+
+.simple-list {
+    padding-left: 40px;
+}
+
+li.technology {
+    list-style    : none;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    margin        : 15px;
+}
+
+.technology img {
+    height: 50px;
+}

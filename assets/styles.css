@@ -5,8 +5,8 @@
 
 html,
 body {
-    margin: 0;
-    height: 100vh;
+    margin     : 0;
+    height     : 100vh;
     font-family: "Fira Code", sans-serif;
 }
 
@@ -24,7 +24,7 @@ h2 {
 
 p,
 .card {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .header-card {
@@ -92,11 +92,6 @@ img.visible {
 }
 
 
-.card-content {
-    padding: 20px;
-}
-
-
 /* section styles */
 
 
@@ -137,6 +132,7 @@ img.visible {
     font-weight     : bolder;
     width           : fit-content;
     padding         : 5px 15px;
+    margin          : 0;
 }
 
 
@@ -172,7 +168,7 @@ img.visible {
     }
 
     .intro-text-wrapper {
-        font-size: 1em;
+        font-size  : 1em;
         line-height: 1.2em;
     }
 
