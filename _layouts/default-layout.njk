@@ -28,7 +28,7 @@
                 {# Build cards #}
                 {%- for card in collections.card -%}
                     <div class="card">
-                        <div class="card-subject">{{card.data.title}}</div>
+                    <h3 class="card-subject">{{card.data.title}}</h3>
                         <div class="card-content">
                             {{ card.data.content | safe }}
                         </div>
