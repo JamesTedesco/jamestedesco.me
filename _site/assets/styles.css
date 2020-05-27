@@ -33,10 +33,11 @@ body {
     color      : #3C73DE;
     font-weight: bolder;
     text-align : end;
+    margin     : 8px 0;
 }
 
 .intro-text-wrapper {
-    text-align: end;
+    text-align : end;
     line-height: 2.5;
 }
 
@@ -45,9 +46,9 @@ body {
 }
 
 .contact-info-wrapper {
-    display: flex;
+    display        : flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap      : wrap;
 }
 
 .contact-info-wrapper img {
@@ -73,11 +74,11 @@ img.visible {
     }
 
     .contact-info-wrapper img {
-        height: 75px;
+        height: 65px;
     }
 
     #portrait {
-        height    : 62vh;
+        height    : 60vh;
         width     : auto;
         margin    : 0 auto;
         margin-top: auto;
