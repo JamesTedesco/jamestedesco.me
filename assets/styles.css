@@ -8,6 +8,18 @@ body {
     color: #484848;
 }
 
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+p, .card {
+    font-size: 1.5em;
+}
+
 .header-card {
     background-color: #F9E3B5;
     box-shadow      : 0px 6px 20px 23px #EBCA84;
@@ -28,6 +40,7 @@ body {
     margin        : 20px;
     display       : flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .greeting-text {
@@ -40,6 +53,7 @@ body {
 .intro-text-wrapper {
     text-align : end;
     line-height: 2.5;
+    font-size: 1.3em;
 }
 
 #mobile-portrait {
@@ -124,7 +138,7 @@ img.visible {
 /* bio */
 
 #biography p {
-    line-height: 30px;
+    line-height: 2em;
 }
 
 #biography span {
