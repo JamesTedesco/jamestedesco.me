@@ -16,7 +16,8 @@ h2 {
     font-size: 3em;
 }
 
-p, .card {
+p,
+.card {
     font-size: 1.5em;
 }
 
@@ -34,12 +35,13 @@ p, .card {
     height    : calc(100vh - 25px);
     margin-top: 25px;
     visibility: hidden;
+    filter: drop-shadow(10px 6px 10px rgba(0, 0, 0, .7));
 }
 
 .general-intro-wrapper {
-    margin        : 20px;
-    display       : flex;
-    flex-direction: column;
+    margin         : 20px;
+    display        : flex;
+    flex-direction : column;
     justify-content: space-around;
 }
 
@@ -53,7 +55,7 @@ p, .card {
 .intro-text-wrapper {
     text-align : end;
     line-height: 2.5;
-    font-size: 1.3em;
+    font-size  : 1.3em;
 }
 
 #mobile-portrait {
@@ -69,7 +71,9 @@ p, .card {
 .contact-info-wrapper img {
     height: 80px;
     margin: 8px;
+    filter: drop-shadow(6px 6px 2px rgba(0, 0, 0, .7));
 }
+
 
 /* prevents FOUC */
 img.visible {
@@ -126,11 +130,11 @@ img.visible {
 
 
 .section-header {
-    color      : orange;
-    font-weight: bolder;
-    margin-top: 30px;
+    color        : orange;
+    font-weight  : bolder;
+    margin-top   : 30px;
     margin-bottom: 10px;
-    margin-left: -20px;
+    margin-left  : -20px;
 }
 
 
@@ -151,9 +155,9 @@ img.visible {
 /* styles for cards */
 
 .card {
-    width: 100%;
+    width     : 100%;
     box-shadow: 2px 2px 6px 0px #949494;
-    margin: 15px 0;
+    margin    : 15px 0;
 }
 
 .card-subject {
