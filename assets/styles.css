@@ -81,40 +81,6 @@ img.visible {
 }
 
 
-@media only screen and (min-width: 1600px) {
-    .header-card {
-        padding: 0 10%;
-    }
-}
-
-@media only screen and (max-width: 540px) {
-    .header-card {
-        flex-direction: column-reverse;
-    }
-
-    .contact-info-wrapper img {
-        height: 65px;
-    }
-
-    #portrait {
-        height    : 60vh;
-        width     : auto;
-        margin    : 0 auto;
-        margin-top: auto;
-    }
-
-    /* move main content */
-    div.container {
-        margin: 0 4%;
-    }
-
-    h2.section-header {
-        margin-left: 0;
-    }
-
-}
-
-
 /* overall */
 .container {
     margin: 0 15%;
@@ -166,4 +132,42 @@ img.visible {
     font-weight     : bolder;
     width           : fit-content;
     padding         : 5px 15px;
+}
+
+
+@media only screen and (min-width: 1600px) {
+    .header-card {
+        padding: 0 10%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .header-card {
+        flex-direction: column-reverse;
+    }
+
+    .contact-info-wrapper img {
+        height: 65px;
+    }
+
+    #portrait {
+        height: auto;
+        width: 18em;
+        margin    : 0 auto;
+        margin-top: auto;
+    }
+
+    /* move main content */
+    div.container {
+        margin: 0 4%;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2.section-header {
+        margin-left: 0;
+    }
+
 }
