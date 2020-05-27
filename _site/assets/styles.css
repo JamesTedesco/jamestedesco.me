@@ -15,6 +15,7 @@ body {
     display         : flex;
     justify-content : space-around;
     height          : 100vh;
+    margin-bottom   : 70px;
 }
 
 .portrait-img {
@@ -52,7 +53,7 @@ body {
 }
 
 .contact-info-wrapper img {
-    height: 100px;
+    height: 80px;
     margin: 8px;
 }
 
@@ -68,7 +69,7 @@ img.visible {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 540px) {
     .header-card {
         flex-direction: column-reverse;
     }
@@ -85,4 +86,59 @@ img.visible {
     }
 
 
+}
+
+
+/* overall */
+.container {
+    margin: 0 15%;
+}
+
+
+.card-content {
+    padding: 20px;
+}
+
+
+/* section styles */
+
+
+.section-header {
+    color      : orange;
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: -20px;
+}
+
+
+
+/* bio */
+
+#biography p {
+    line-height: 30px;
+}
+
+#biography span {
+    font-weight: bold;
+}
+
+
+
+
+/* styles for cards */
+
+.card {
+    width: 100%;
+    box-shadow: 2px 2px 6px 0px #949494;
+    margin: 30px 0;
+}
+
+.card-subject {
+    background-color: #3C73DE;
+    color           : white;
+    font-weight     : bolder;
+    width           : fit-content;
+    padding         : 5px 15px;
+    font-size       : 25px;
 }
