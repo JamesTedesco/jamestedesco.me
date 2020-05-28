@@ -1,9 +1,12 @@
 .experience-level {
     background-color: #FF9A36;
-    color           : white;
-    width           : fit-content;
-    font-weight     : bolder;
-    padding         : 10px;
+    color: white;
+    width: fit-content;
+    font-weight: bolder;
+    padding: 10px;
+    margin: 0 43.8px;
+    transform: rotate(90deg);
+    transform-origin: top left;
 }
 
 hr {
