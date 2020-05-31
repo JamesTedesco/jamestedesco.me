@@ -40,8 +40,11 @@ article {
 
 .portrait-img {
     height    : calc(100vh - 25px);
-    margin-top: 25px;
     visibility: hidden;
+    /* change on-load */
+    opacity: 0;
+    margin-top: 100px;
+    transition: all 2s ease;
 }
 
 .general-intro-wrapper {
@@ -64,10 +67,6 @@ article {
     font-size  : 1.3em;
 }
 
-#mobile-portrait {
-    display: none;
-}
-
 .contact-info-wrapper {
     display        : flex;
     justify-content: space-evenly;
@@ -81,9 +80,11 @@ article {
 }
 
 
-/* prevents FOUC */
+/* prevents FOUC --> added via JS */
 img.visible {
     visibility: visible;
+    opacity: 1;
+    margin-top: 25;
 }
 
 
@@ -155,8 +156,10 @@ img.visible {
     #portrait {
         height    : auto;
         width     : 18em;
-        margin    : 0 auto;
-        margin-top: auto;
+    }
+
+    img.visible {
+        margin-top: 0;
     }
 
     /* move main content */
