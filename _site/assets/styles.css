@@ -243,14 +243,24 @@ label * {
     box-shadow: inset 0px 0px 10px 8px #f47c00;
 }
 
-.success-msg {
+#successWrapper {
+
+}
+
+#successMsg {
     text-align: center;
-    padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
     background-color: rgb(223, 249, 223);
     color: green;
-    display: none;
+    max-height: 0;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+#successMsg.visible {
+    max-height: 500px;
+    padding: 20px;
 }
 
 

@@ -165,9 +165,9 @@
                         </li>
                     </ul>
                 </article>
-                <div class="success-msg">Your submission was received!</div>
+                <div id="successMsg">Your submission was received!</div>
                 <article class="form-wrapper">
-                    <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/?submission=success">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/#contact/?submission=success">
                         <label>Your Name:
                             <input type="text" name="name"/></label>
                         <label>Your Email:
@@ -181,16 +181,32 @@
             </section>
         </div>
         <script>
-            let values = window.location.search
-            let params = new URLSearchParams(values)
-            let submissionStatus = params.get('submission')
+            handleURLParams()
+            function handleURLParams() {
+                // determine submission status
+                let params = new URLSearchParams(window.location.search)
+                let submissionStatus = params.get('submission')
 
-            if (submissionStatus == "success") {
-                console.log(submissionStatus)
+                // handle if submitted
+                if (submissionStatus == "success") {
+
+                    // delete URL param
+                    window.history.replaceState({}, document.title, "/");
+
+
+                    // notify success
+                    let successMsg = document.getElementById('successMsg')
+                    successMsg
+                        .classList
+                        .add('visible')
+
+
+                    // hide success msg after a few seconds
+                    setTimeout(() => {
+                        successMsg.classList.remove('visible')
+                    }, 5000)
+                }
             }
-
-            console.log('outside')
-
         </script>
     </body>
 </html>
