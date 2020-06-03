@@ -271,7 +271,7 @@
                 </article>
                 <div id="successMsg">Your submission was received!</div>
                 <article class="form-wrapper">
-                    <form class="contact-form" name="contact" method="POST" data-netlify="true" onsubmit="successStatus()" action="/#contact">
+                    <form id='form' class="contact-form" name="contact" method="POST" data-netlify="true" action="/#contact">
                         <label>Your Name:
                             <input type="text" name="name"/></label>
                         <label>Your Email:
@@ -287,10 +287,18 @@
         <script>
             // check if a form has been submitted on load
             checkSubmissionStatus()
+            successStatus()
 
-            // called by form onSubmit
+            // called by form
             function successStatus() {
-                localStorage.setItem('submission', 'success')
+
+                document
+                    .getElementById('form')
+                    .addEventListener('submit', (evt) => {
+
+                        console.log('submitted')
+                        localStorage.setItem('submission', 'success')
+                    })
             }
 
             // check local storage
