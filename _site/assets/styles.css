@@ -173,7 +173,7 @@ img.visible {
 
 
 
-/* bio */
+/* text blocks */
 
 .text-section {
     padding: 10px 0;
@@ -189,24 +189,61 @@ img.visible {
 }
 
 
-
-
-/* styles for cards */
-
-.card {
-    width        : 100%;
-    box-shadow   : 2px 2px 6px 0px #949494;
-    margin-bottom: 45px;
-}
-
-.card-subject {
+/* forms */
+.form-wrapper {
+    border-radius: 10px;
     background-color: #3C73DE;
-    color           : white;
-    font-weight     : bolder;
-    width           : fit-content;
-    padding         : 5px 15px;
-    margin          : 0;
 }
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+label {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+label * {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.form-message {
+    width: 100%
+}
+
+.form-textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+.submit-btn {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    transition: all .2s ease;
+    display: flex;
+    background: rgb(255, 176, 30);
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+.submit-btn:hover {
+    box-shadow: 0px 0px 10px 0px white;
+    cursor: pointer;
+}
+
+.submit-btn:active {
+    box-shadow: inset 0px 0px 10px 8px #f47c00;
+}
+
+
+
 
 
 @media only screen and (min-width: 1600px) {

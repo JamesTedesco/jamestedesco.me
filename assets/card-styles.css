@@ -52,3 +52,22 @@ ul {
 .icon-item * {
     padding: 10px;
 }
+
+
+
+/* styles for cards */
+
+.card {
+    width        : 100%;
+    box-shadow   : 2px 2px 6px 0px #949494;
+    margin-bottom: 45px;
+}
+
+.card-subject {
+    background-color: #3C73DE;
+    color           : white;
+    font-weight     : initial;
+    width           : fit-content;
+    padding         : 5px 15px;
+    margin          : 0;
+}
