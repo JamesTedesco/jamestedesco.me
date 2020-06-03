@@ -5,9 +5,10 @@
 
 html,
 body {
-    margin     : 0;
-    height     : 100vh;
-    font-family: "Fira Code", sans-serif;
+    margin         : 0;
+    height         : 100vh;
+    font-family    : "Fira Code", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,21 +20,54 @@ h1 {
     font-size: 4em;
 }
 
+
+/* section styles */
 h2 {
-    font-size: 3em;
+    margin: 0;
 }
 
-a {
+.section-header {
+    display        : flex;
+    align-items    : center;
+    width          : fit-content;
+    font-size      : 2em;
+    color          : orange;
+    text-decoration: none;
+    font-weight    : bolder;
+    margin-top     : 30px;
+    margin-bottom  : 10px;
+    margin-left    : -20px;
+}
+
+.section-header svg {
+    height: 1.5em;
+    width : auto;
+}
+
+.section-header:hover svg {
+    fill: #3db7cf;
+}
+
+.section-header:hover {
+    text-decoration: underline #3db7cf;
+}
+
+.section-header h2 {
+    margin-right: 10px;
+}
+
+
+a.link {
     position       : relative;
     color          : black;
     text-decoration: none;
 }
 
-a:hover {
+a.link:hover {
     color: white;
 }
 
-a:after {
+a.link:after {
     content         : "";
     background-color: #3db7cf;
     position        : absolute;
@@ -45,7 +79,7 @@ a:after {
     transition      : 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
 }
 
-a:hover:after {
+a.link:hover:after {
     left  : -3%;
     bottom: -3%;
     width : 106%;
@@ -53,7 +87,7 @@ a:hover:after {
 }
 
 section {
-    margin-bottom: 70px;
+    margin: 70px 0;
 }
 
 
@@ -136,27 +170,16 @@ img.visible {
 }
 
 
-/* section styles */
-
-
-.section-header {
-    color        : orange;
-    font-weight  : bolder;
-    margin-top   : 30px;
-    margin-bottom: 10px;
-    margin-left  : -20px;
-}
-
 
 
 /* bio */
 
-#biography p {
+.text-section p {
     line-height: 1.2em;
-    font-size: 1.1em;
+    font-size  : 1.1em;
 }
 
-#biography span {
+.text-section span {
     font-weight: bold;
 }
 
