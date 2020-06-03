@@ -233,16 +233,20 @@ img.visible {
         margin: 0 4%;
     }
 
-    h1 {
-        font-size: 3em;
-    }
-
     .intro-text-wrapper {
         font-size  : 1em;
         line-height: 1.2em;
     }
 
-    h2.section-header {
+    .section-header svg {
+        height: 1em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .section-header {
         margin-left: 0;
     }
 
