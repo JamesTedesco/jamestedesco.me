@@ -56,18 +56,19 @@ h2 {
     margin-right: 10px;
 }
 
-
-a.link {
-    position       : relative;
-    color          : black;
+a {
     text-decoration: none;
 }
 
-a.link:hover {
-    color: white;
+.link {
+    position       : relative;
+    color          : #484848;
 }
 
-a.link:after {
+.link:hover {
+    color: white;
+}
+.link:after {
     content         : "";
     background-color: #3db7cf;
     position        : absolute;
@@ -79,7 +80,7 @@ a.link:after {
     transition      : 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
 }
 
-a.link:hover:after {
+.link:hover:after {
     left  : -3%;
     bottom: -3%;
     width : 106%;
@@ -173,6 +174,10 @@ img.visible {
 
 
 /* bio */
+
+.text-section {
+    padding: 10px 0;
+}
 
 .text-section p {
     line-height: 1.2em;

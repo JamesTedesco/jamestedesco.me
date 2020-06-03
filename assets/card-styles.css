@@ -16,10 +16,10 @@ hr {
 
 ul {
     margin : 0;
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
-.technologies-list {
+.icons-list {
     display        : flex;
     justify-content: space-around;
     flex-wrap      : wrap;
@@ -30,17 +30,25 @@ ul {
 }
 
 .simple-list li {
-    line-height: 2em;
+    margin: 20px 0;
+    line-height: 1.6em;
 }
 
-li.technology {
-    list-style    : none;
+.icons-list li {
+    list-style: none;
+}
+
+.icon-item {
     display       : flex;
     flex-direction: column;
     align-items   : center;
     margin        : 15px;
 }
 
-.technology img {
+.icon-item img {
     height: 50px;
+}
+
+.icon-item * {
+    padding: 10px;
 }
