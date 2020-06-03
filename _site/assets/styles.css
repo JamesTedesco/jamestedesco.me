@@ -210,15 +210,16 @@ label {
 label * {
     padding: 5px 10px;
     border-radius: 5px;
+    width: 300px;
 }
 
 .form-message {
-    width: 100%
+    width: 100%;
 }
 
 .form-textarea {
-    width: 100%;
-    min-height: 100px;
+    min-height: 150px;
+    width: 100% !important;
 }
 
 .submit-btn {
