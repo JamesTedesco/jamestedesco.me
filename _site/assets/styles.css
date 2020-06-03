@@ -260,7 +260,7 @@ label * {
     overflow: hidden;
 }
 
-#successMsg.visible {
+#successMsg.reveal-msg {
     max-height: 500px;
     padding: 20px;
 }

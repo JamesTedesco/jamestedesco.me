@@ -234,13 +234,13 @@
                     let successMsg = document.getElementById('successMsg')
                     successMsg
                         .classList
-                        .add('visible')
+                        .add('reveal-msg')
 
                     // hide success msg after 10 seconds
                     setTimeout(() => {
                         successMsg
                             .classList
-                            .remove('visible')
+                            .remove('reveal-msg')
                     }, 6000)
                 }
             }
