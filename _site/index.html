@@ -269,19 +269,32 @@
                         </li>
                     </ul>
                 </article>
+                <div class="success-msg">Your submission was received!</div>
                 <article class="form-wrapper">
-                    <form class="contact-form" name="contact" method="POST" data-netlify="true">
-                            <label>Your Name:
-                                <input type="text" name="name"/></label>
-                            <label>Your Email:
-                                <input type="email" name="email"/></label>
-                            <label class="form-message">Message:
-                                <textarea class="form-textarea" name="message"></textarea>
-                            </label>
-                            <button class="submit-btn" type="submit">Submit</button>
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/?submission=success">
+                        <label>Your Name:
+                            <input type="text" name="name"/></label>
+                        <label>Your Email:
+                            <input type="email" name="email"/></label>
+                        <label class="form-message">Message:
+                            <textarea class="form-textarea" name="message"></textarea>
+                        </label>
+                        <button class="submit-btn" type="submit">Submit</button>
                     </form>
                 </article>
             </section>
         </div>
+        <script>
+            let values = window.location.search
+            let params = new URLSearchParams(values)
+            let submissionStatus = params.get('submission')
+
+            if (submissionStatus == "success") {
+                console.log(submissionStatus)
+            }
+
+            console.log('outside')
+
+        </script>
     </body>
 </html>

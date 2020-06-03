@@ -243,6 +243,16 @@ label * {
     box-shadow: inset 0px 0px 10px 8px #f47c00;
 }
 
+.success-msg {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: rgb(223, 249, 223);
+    color: green;
+    display: none;
+}
+
 
 
 
