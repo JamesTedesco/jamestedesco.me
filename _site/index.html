@@ -285,30 +285,36 @@
             </section>
         </div>
         <script>
+            // check if a form has been submitted on load
+            checkSubmissionStatus()
+
             // called by form onSubmit
             function successStatus() {
                 localStorage.setItem('submission', 'success')
             }
 
-            checkSubmissionStatus()
+            // check local storage
             function checkSubmissionStatus() {
                 var status = localStorage.getItem('submission')
-                if (status == 'success') {
-                    console.log('success')
 
-                    // notify success with animation
+                // if appropriate, show success animation
+                if (status == 'success') {
+
+                    // remove local storage item
+                    localStorage.removeItem('submission')
+
+                    // notify success
                     let successMsg = document.getElementById('successMsg')
                     successMsg
                         .classList
                         .add('visible')
 
-                    // hide success msg after a few seconds
+                    // hide success msg after 10 seconds
                     setTimeout(() => {
                         successMsg
                             .classList
                             .remove('visible')
                     }, 10000)
-
                 }
             }
         </script>
