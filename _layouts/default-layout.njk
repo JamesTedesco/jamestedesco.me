@@ -167,7 +167,7 @@
                 </article>
                 <div id="successMsg">Your submission was received!</div>
                 <article class="form-wrapper">
-                    <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/#contact/?submission=success">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" onsubmit="successStatus()" action="/#contact">
                         <label>Your Name:
                             <input type="text" name="name"/></label>
                         <label>Your Email:
@@ -181,30 +181,30 @@
             </section>
         </div>
         <script>
-            handleURLParams()
-            function handleURLParams() {
-                // determine submission status
-                let params = new URLSearchParams(window.location.search)
-                let submissionStatus = params.get('submission')
+            // called by form onSubmit
+            function successStatus() {
+                localStorage.setItem('submission', 'success')
+            }
 
-                // handle if submitted
-                if (submissionStatus == "success") {
+            checkSubmissionStatus()
+            function checkSubmissionStatus() {
+                var status = localStorage.getItem('submission')
+                if (status == 'success') {
+                    console.log('success')
 
-                    // delete URL param
-                    window.history.replaceState({}, document.title, "/");
-
-
-                    // notify success
+                    // notify success with animation
                     let successMsg = document.getElementById('successMsg')
                     successMsg
                         .classList
                         .add('visible')
 
-
                     // hide success msg after a few seconds
                     setTimeout(() => {
-                        successMsg.classList.remove('visible')
+                        successMsg
+                            .classList
+                            .remove('visible')
                     }, 5000)
+
                 }
             }
         </script>
