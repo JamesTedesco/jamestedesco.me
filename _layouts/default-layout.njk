@@ -181,23 +181,28 @@
             </section>
         </div>
         <script>
-            // check if a form has been submitted on load
-            checkSubmissionStatus()
-            successStatus()
+            main()
 
-            // called by form
+            function main() {
+                // check if a form has been submitted on load
+                checkSubmissionStatus()
+                successStatus()
+            }
+
+            // indicate successful submission of contact form
             function successStatus() {
 
+                // add event listener to form
                 document
                     .getElementById('form')
                     .addEventListener('submit', (evt) => {
 
-                        console.log('submitted')
+                        // mark success if form submitted
                         localStorage.setItem('submission', 'success')
                     })
             }
 
-            // check local storage
+            // check if form was successfully submitted
             function checkSubmissionStatus() {
                 var status = localStorage.getItem('submission')
 
