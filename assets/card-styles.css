@@ -14,11 +14,6 @@ hr {
     border-top: 2px dashed black;
 }
 
-ul {
-    margin : 0;
-    padding-bottom: 20px;
-}
-
 .icons-list {
     display        : flex;
     justify-content: space-around;
@@ -26,7 +21,8 @@ ul {
 }
 
 .simple-list {
-    padding-left: 40px;
+    padding-left: 60px;
+    padding-bottom: 20px;
 }
 
 .simple-list li {
@@ -70,4 +66,8 @@ ul {
     width           : fit-content;
     padding         : 5px 15px;
     margin          : 0;
+}
+
+.text-in-card {
+    padding: 20px;
 }
