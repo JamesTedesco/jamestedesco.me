@@ -283,6 +283,11 @@ label * {
 }
 
 @media only screen and (max-width: 540px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
     .header-card {
         flex-direction: column-reverse;
     }
@@ -293,7 +298,7 @@ label * {
 
     #portrait {
         height: auto;
-        width : 18em;
+        width : 40vh;
     }
 
     img.visible {
