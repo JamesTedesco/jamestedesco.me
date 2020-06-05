@@ -64,7 +64,7 @@ function sizePortraitOnMobile() {
         let windowWidth = e.target.innerWidth
 
         // if bigger than mobile, remove inline style
-        if (windowWidth < 540) {
+        if (windowWidth < 730) {
 
             console.log('small screen')
 
