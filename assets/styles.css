@@ -9,7 +9,6 @@ body {
     height         : 100vh;
     font-family    : "Fira Code", sans-serif;
     scroll-behavior: smooth;
-    width: 100%;
 }
 
 body {
@@ -111,10 +110,10 @@ section {
 
 .portrait-img {
     height      : calc(100vh - 25px);
+    align-self  : flex-end;
     /* change on-load */
     visibility  : hidden;
     opacity     : 0;
-    display: block;
     margin-left : auto;
     margin-right: auto;
     margin-top  : 100px;
@@ -141,50 +140,27 @@ section {
     font-size  : 1.3em;
 }
 
-
-.contact-btn {
-    color: white;
-    font-size: 1.5em;
-    background: #ffab43;
-    border: 1px orange solid;
-    box-shadow: 4px 4px 4px 1px #a8d3ff;
-    transition: all .2s ease;
-    padding: 5px;
-}
-
-.contact-btn:hover {
-    cursor: pointer;
-    box-shadow: 4px 4px 20px 0px #419af5;
-}
-
-.contact-btn:active {
-    border: #3c73de 1px solid;
-    box-shadow: 1px 1px 4px 1px #a8d3ff, inset 2px 2px 15px 2px #e17a19;
-}
-
 .contact-info-wrapper {
     display        : flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
     flex-wrap      : wrap;
 }
 
-/* arrow styles */
-.contact-info-wrapper .down-arrow {
+/* button styles */
+.contact-info-wrapper img {
     height    : 80px;
     margin    : 8px;
+    transition: all .2s ease;
     filter    : drop-shadow(6px 6px 2px rgba(0, 0, 0, .7));
-    animation: MoveUpDown 4s ease infinite;
 }
 
-@keyframes MoveUpDown {
-    0%, 100% {
-        transform: translateY(-10px);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-  }
+.contact-info-wrapper img:hover {
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+}
+
+.contact-info-wrapper img:active {
+    filter: drop-shadow(3px 3px 5px #3C73DE);
+}
 
 
 /* prevents FOUC --> added via JS */
@@ -308,10 +284,6 @@ label * {
 
 @media only screen and (max-width: 540px) {
 
-    html, body {
-        width: 100vw
-    }
-
     h1 {
         font-size: 2em;
     }
@@ -322,10 +294,6 @@ label * {
 
     .contact-info-wrapper img {
         height: 65px;
-    }
-
-    .contact-btn {
-        font-size: 1em;
     }
 
     #portrait {
