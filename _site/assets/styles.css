@@ -110,7 +110,7 @@ section {
 
 .portrait-img {
     height      : calc(100vh - 25px);
-    align-self  : flex-end;
+    display: block;
     /* change on-load */
     visibility  : hidden;
     opacity     : 0;
