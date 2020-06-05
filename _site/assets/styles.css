@@ -108,6 +108,11 @@ section {
     margin-bottom   : 70px;
 }
 
+#portrait-link {
+    display: flex;
+    align-items: flex-end;
+}
+
 .portrait-img {
     height      : calc(100vh - 25px);
     display: block;

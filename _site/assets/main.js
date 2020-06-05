@@ -57,11 +57,12 @@ function checkSubmissionStatus() {
 function sizePortraitOnMobile() {
 
     window.addEventListener('resize', reportWindowSize);
+    window.addEventListener('load', reportWindowSize)
 
     function reportWindowSize(e) {
         // get window height from event
-        let windowHeight = e.target.innerHeight
-        let windowWidth = e.target.innerWidth
+        let windowHeight = window.innerHeight
+        let windowWidth = window.innerWidth
 
         // if bigger than mobile, remove inline style
         if (windowWidth < 730) {
