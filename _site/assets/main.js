@@ -64,6 +64,18 @@ function sizePortraitOnMobile() {
         let windowHeight = window.innerHeight
         let windowWidth = window.innerWidth
 
+
+        let header = document.getElementById('home')
+        let headerHeight = header.offsetHeight
+
+        if (headerHeight > windowHeight) {
+            console.log('hit')
+        }
+
+
+
+
+
         // if bigger than mobile, remove inline style
         if (windowWidth < 730) {
 
@@ -87,13 +99,13 @@ function sizePortraitOnMobile() {
             let portrait = document.getElementById('portrait')
 
             portrait.removeAttribute('style')
-
-
         }
-
-
-
     }
+}
+
+
+function headerTooTall() {
+
 }
 
 
@@ -133,7 +145,7 @@ function sizePortraitOnMobile() {
                 arrow.classList.add('reveal-arrow')
 
             }
-        }, 8000)
+        }, 1000)
 
 
 

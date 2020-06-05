@@ -109,44 +109,43 @@ section {
 }
 
 #portrait-link {
-    display: flex;
+    display    : flex;
     align-items: flex-end;
 }
 
 .portrait-img {
     height      : calc(100vh - 25px);
-    display: block;
+    display     : block;
     /* change on-load */
     visibility  : hidden;
     opacity     : 0;
     margin-left : auto;
     margin-right: auto;
-    transform  : translateY(100px);
+    transform   : translateY(100px);
     transition  : all 2s ease;
 }
 
-#nudge-arrow {
-    position: absolute;
-    height: 65px;
-    display: flex;
-    bottom: 80px;
-    animation: MoveUpDown 5s ease infinite;
-    width: 54px;
-    left: calc(50% - 22px);
-    fill: #3c73de;
-    opacity: 0;
-    transition: all .4s ease;
-    visibility: hidden;
+#nudge-arrow svg {
+    height    : 65px;
+    animation : MoveUpDown 5s ease infinite;
+    fill      : #3c73de;
+    opacity   : 0;
+    transition: all 1s ease;
+    width     : 0;
+    overflow  : hidden;
 }
 
 @keyframes MoveUpDown {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(-10px);
     }
+
     50% {
         transform: translateY(10px);
     }
-  }
+}
 
 .general-intro-wrapper {
     margin         : 20px;
@@ -192,11 +191,21 @@ section {
 
 
 /* prevents FOUC --> added via JS */
-img.visible, #nudge-arrow.reveal-arrow {
+img.visible {
     visibility: visible;
     opacity   : 1;
     margin-top: 25;
-    transform: translateY(0);
+    transform : translateY(0);
+}
+
+#nudge-arrow.reveal-arrow {
+    display    : flex;
+    align-items: center;
+}
+
+#nudge-arrow.reveal-arrow svg {
+    opacity: 1;
+    width  : 54px;
 }
 
 
@@ -330,9 +339,12 @@ label * {
         margin-top: 0;
     }
 
-    #nudge-arrow {
-        fill: white;
-        bottom: 40px;
+    #nudge-arrow svg {
+        position: absolute;
+        fill    : white;
+        width   : 54px;
+        bottom  : 40px;
+        left    : calc(50% - 22px);
     }
 
     /* move main content */
