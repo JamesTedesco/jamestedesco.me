@@ -307,7 +307,7 @@ label * {
     }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 730px) {
 
     h1 {
         font-size: 2em;

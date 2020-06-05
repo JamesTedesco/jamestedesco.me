@@ -56,74 +56,85 @@ function checkSubmissionStatus() {
 
 function sizePortraitOnMobile() {
 
-    // test if hit mobile breakpoint
-    if (window.innerWidth > 540) { return }
+    window.addEventListener('resize', reportWindowSize);
 
-    console.log('small screen')
+    function reportWindowSize(e) {
+        // get window height from event
+        let windowHeight = e.target.innerHeight
+        let windowWidth = e.target.innerWidth
 
-    // find wrapper height
-    let introWrapper = document.getElementById('intro-wrapper')
-    let boxHeight = introWrapper.offsetHeight
-    let computedStyles = getComputedStyle(introWrapper)
-    let marginLeft = parseInt(computedStyles.marginLeft)
-    let marginRight = parseInt(computedStyles.marginRight)
-    let wrapperHeight = boxHeight + marginLeft + marginRight
+        // if bigger than mobile, remove inline style
+        if (windowWidth < 540) {
 
-    // get window height
-    let windowHeight = window.innerHeight
+            console.log('small screen')
 
-
-    console.log(wrapperHeight, windowHeight, windowHeight-wrapperHeight)
-
-
-    let correctedHeight = windowHeight - wrapperHeight
-    let portrait = document.getElementById('portrait')
-    portrait.style.height = correctedHeight
+            // find wrapper height
+            let introWrapper = document.getElementById('intro-wrapper')
+            let boxHeight = introWrapper.offsetHeight
+            let computedStyles = getComputedStyle(introWrapper)
+            let marginLeft = parseInt(computedStyles.marginLeft)
+            let marginRight = parseInt(computedStyles.marginRight)
+            let wrapperHeight = boxHeight + marginLeft + marginRight
 
 
+            let correctedHeight = windowHeight - wrapperHeight
+            let portrait = document.getElementById('portrait')
+            portrait.style.height = correctedHeight
+
+        } else {
+            console.log('larger screen')
+            let portrait = document.getElementById('portrait')
+
+            portrait.removeAttribute('style')
+
+
+        }
+
+
+
+    }
 }
 
 
 
+    function checkInitialScroll() {
 
-function checkInitialScroll() {
+        // prevent listener if already loaded past splash screen
+        // if (window.location.href != "https://www.jamestedesco.me/") { return }
 
-    // prevent listener if already loaded past splash screen
-    // if (window.location.href != "https://www.jamestedesco.me/") { return }
+        console.log('recognized location')
 
-    console.log('recognized location')
-
-    // listener type, function receiving notification, param options
-    window.addEventListener("scroll", runOnScroll, { passive: true });
-
-
-    // find arrow element
-    let arrow = document.getElementById('nudge-arrow')
+        // listener type, function receiving notification, param options
+        window.addEventListener("scroll", runOnScroll, { passive: true });
 
 
-    // set default state
-    let hasScrolled = false
-    
-    function runOnScroll(evt) {
-        // indicate when scrolling has occured
-        hasScrolled = true
+        // find arrow element
+        let arrow = document.getElementById('nudge-arrow')
 
-        // reset arrow state if possible
-        arrow.classList.remove('reveal-arrow')
-    };
 
-    
-    window.setTimeout(() => {
+        // set default state
+        let hasScrolled = false
 
-        // nudge user after waiting
-        if (hasScrolled == false) {
-            // show down-arrow
-            arrow.classList.add('reveal-arrow')
-            
-        }
-    }, 8000)
+        function runOnScroll(evt) {
+            // indicate when scrolling has occured
+            hasScrolled = true
 
+            // reset arrow state if possible
+            arrow.classList.remove('reveal-arrow')
+        };
+
+
+        window.setTimeout(() => {
+
+            // nudge user after waiting
+            if (hasScrolled == false) {
+                // show down-arrow
+                arrow.classList.add('reveal-arrow')
+
+            }
+        }, 8000)
 
 
 
-}  
+
+    }  
