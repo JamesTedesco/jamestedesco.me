@@ -321,11 +321,6 @@ label * {
         height: 65px;
     }
 
-    #portrait {
-        height: auto;
-        width : 40vh;
-    }
-
     img.visible {
         margin-top: 0;
     }

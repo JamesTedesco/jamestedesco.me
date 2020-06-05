@@ -1,10 +1,16 @@
 main()
 
 function main() {
+
+    // size portrait on mobile
+    sizePortraitOnMobile()
+
+    // nudge the user if they're not scrolling
+    checkInitialScroll()
+
     // check if a form has been submitted on load
     checkSubmissionStatus()
     successStatus()
-    checkInitialScroll()
 
     console.log('inside, thanks')
 }
@@ -48,6 +54,36 @@ function checkSubmissionStatus() {
 }
 
 
+function sizePortraitOnMobile() {
+
+    // test if hit mobile breakpoint
+    if (window.innerWidth > 540) { return }
+
+    console.log('small screen')
+
+    // find wrapper height
+    let introWrapper = document.getElementById('intro-wrapper')
+    let boxHeight = introWrapper.offsetHeight
+    let computedStyles = getComputedStyle(introWrapper)
+    let marginLeft = parseInt(computedStyles.marginLeft)
+    let marginRight = parseInt(computedStyles.marginRight)
+    let wrapperHeight = boxHeight + marginLeft + marginRight
+
+    // get window height
+    let windowHeight = window.innerHeight
+
+
+    console.log(wrapperHeight, windowHeight, windowHeight-wrapperHeight)
+
+
+    let correctedHeight = windowHeight - wrapperHeight
+    let portrait = document.getElementById('portrait')
+    portrait.style.height = correctedHeight
+
+
+}
+
+
 
 
 function checkInitialScroll() {
@@ -71,15 +107,16 @@ function checkInitialScroll() {
     window.setTimeout(() => {
 
         if (hasScrolled == false) {
+
+            // find arrow element
             let arrow = document.getElementById('nudge-arrow')
-            console.log(arrow)
 
             // show down-arrow
             arrow.classList.add('reveal-arrow')
         } else {
             console.log('keep on cruisin\' babe')
         }
-    }, 2000)
+    }, 8000)
 
 
 
