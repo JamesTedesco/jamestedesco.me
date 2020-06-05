@@ -145,7 +145,7 @@ function headerTooTall() {
                 arrow.classList.add('reveal-arrow')
 
             }
-        }, 1000)
+        }, 8000)
 
 
 
