@@ -125,7 +125,7 @@ section {
     height: 65px;
     display: flex;
     bottom: 80px;
-    animation: MoveUpDown 4s ease infinite;
+    animation: MoveUpDown 5s ease infinite;
     width: 54px;
     left: calc(50% - 22px);
     fill: #3c73de;

@@ -96,25 +96,30 @@ function checkInitialScroll() {
     // listener type, function receiving notification, param options
     window.addEventListener("scroll", runOnScroll, { passive: true });
 
-    let hasScrolled = false
-    // what should we do when scrolling occurs
-    function runOnScroll(evt) {
 
+    // find arrow element
+    let arrow = document.getElementById('nudge-arrow')
+
+
+    // set default state
+    let hasScrolled = false
+    
+    function runOnScroll(evt) {
+        // indicate when scrolling has occured
         hasScrolled = true
+
+        // reset arrow state if possible
+        arrow.classList.remove('reveal-arrow')
     };
 
-    // if user hasn't scrolled in 8 seconds, give nudge
+    
     window.setTimeout(() => {
 
+        // nudge user after waiting
         if (hasScrolled == false) {
-
-            // find arrow element
-            let arrow = document.getElementById('nudge-arrow')
-
             // show down-arrow
             arrow.classList.add('reveal-arrow')
-        } else {
-            console.log('keep on cruisin\' babe')
+            
         }
     }, 8000)
 
