@@ -101,7 +101,7 @@ section {
 .header-card {
     background-color: #F9E3B5;
     box-shadow      : 0px 6px 20px 23px #EBCA84;
-    overflow        : auto;
+    overflow        : hidden;
     display         : flex;
     justify-content : space-around;
     min-height      : 100vh;
@@ -116,9 +116,32 @@ section {
     opacity     : 0;
     margin-left : auto;
     margin-right: auto;
-    margin-top  : 100px;
+    transform  : translateY(100px);
     transition  : all 2s ease;
 }
+
+#nudge-arrow {
+    position: absolute;
+    height: 65px;
+    display: flex;
+    bottom: 80px;
+    animation: MoveUpDown 4s ease infinite;
+    width: 54px;
+    left: calc(50% - 22px);
+    fill: #3c73de;
+    opacity: 0;
+    transition: all .4s ease;
+    visibility: hidden;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+  }
 
 .general-intro-wrapper {
     margin         : 20px;
@@ -164,11 +187,13 @@ section {
 
 
 /* prevents FOUC --> added via JS */
-img.visible {
+img.visible, #nudge-arrow.reveal-arrow {
     visibility: visible;
     opacity   : 1;
     margin-top: 25;
+    transform: translateY(0);
 }
+
 
 
 /* overall */
@@ -303,6 +328,11 @@ label * {
 
     img.visible {
         margin-top: 0;
+    }
+
+    #nudge-arrow {
+        fill: white;
+        bottom: 40px;
     }
 
     /* move main content */

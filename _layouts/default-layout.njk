@@ -205,52 +205,6 @@
                 </article>
             </section>
         </div>
-        <script>
-            main()
-
-            function main() {
-                // check if a form has been submitted on load
-                checkSubmissionStatus()
-                successStatus()
-            }
-
-            // indicate successful submission of contact form
-            function successStatus() {
-
-                // add event listener to form
-                document
-                    .getElementById('form')
-                    .addEventListener('submit', (evt) => {
-
-                        // mark success if form submitted
-                        localStorage.setItem('submission', 'success')
-                    })
-            }
-
-            // check if form was successfully submitted
-            function checkSubmissionStatus() {
-                var status = localStorage.getItem('submission')
-
-                // if appropriate, show success animation
-                if (status == 'success') {
-
-                    // remove local storage item
-                    localStorage.removeItem('submission')
-
-                    // notify success
-                    let successMsg = document.getElementById('successMsg')
-                    successMsg
-                        .classList
-                        .add('reveal-msg')
-
-                    // hide success msg after 10 seconds
-                    setTimeout(() => {
-                        successMsg
-                            .classList
-                            .remove('reveal-msg')
-                    }, 6000)
-                }
-            }
-        </script>
+        <script src="/assets/main.js"></script>
     </body>
 </html>
