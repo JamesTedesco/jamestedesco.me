@@ -1,42 +1,31 @@
-<html>
-    <body>
-        <header id="home" class="header-card">
-            <a id="portrait-link" href="#home">
-                <img id="portrait" class='portrait-img' src="/assets/myself.png" alt="A picture of me dressed real snazzy-like.">
+<header id="home" class="header-card">
+    <a id="portrait-link" href="#home">
+        <img id="portrait" class='portrait-img' src="/assets/myself.png" alt="A picture of me dressed real snazzy-like.">
+    </a>
+
+    <div id="intro-wrapper" class="general-intro-wrapper">
+        <div>
+            <h1 class="greeting-text">Hi, I'm James!</h1>
+            <aside class="intro-text-wrapper">
+                <div>A soccer playing,</div>
+                <div>music making,</div>
+                <div>web-developing student.</div>
+            </aside>
+        </div>
+
+        <div class="contact-info-wrapper">
+            <a id='nudge-arrow' href="#biography">
+                <svg enable-background="new 0 0 512 512" height="512" viewbox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+                    <g><path d="m423.04 216.42c-10.47-10.33-24.33-16.02-39.04-16.02-14.85 0-28.81 5.78-39.31 16.29l-32.69 32.68v-193.37c0-30.88-25.12-56-56-56s-56 25.12-56 56v193.37l-32.19-32.19c-10.5-10.5-25.09-16.51-40.05-16.51h-.19c-14.94.05-28.84 5.84-39.15 16.29-10.33 10.47-16.02 24.33-16.02 39.04 0 14.85 5.78 28.81 16.29 39.31l134.78 134.79c8.97 8.97 20.75 13.45 32.53 13.45s23.56-4.48 32.53-13.45l134.29-134.29c10.54-10.54 16.56-25.21 16.51-40.24-.05-14.94-5.84-28.84-16.29-39.15z"/></g>
+                </svg>
             </a>
+            <a target="_blank" href="https://github.com/JamesTedesco">
+                <img src="/assets/icons/github.svg" alt="Github icon"></a>
+            <a target="_blank" href="https://twitter.com/JamesT802">
+                <img src="/assets/icons/twitter.svg" alt="Twitter icon"></a>
+            <a href="#contact">
+                <img src="/assets/icons/mail.svg" alt="Email icon"></a>
+        </div>
+    </div>
 
-            <div id="intro-wrapper" class="general-intro-wrapper">
-                <div>
-                    <h1 class="greeting-text">Hi, I'm James!</h1>
-                    <aside class="intro-text-wrapper">
-                        <div>A soccer playing,</div>
-                        <div>music making,</div>
-                        <div>web-developing student.</div>
-                    </aside>
-                </div>
-
-                <div class="contact-info-wrapper">
-                    <a id='nudge-arrow' href="#biography">
-                        <svg enable-background="new 0 0 512 512" height="512" viewbox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
-                            <g><path d="m423.04 216.42c-10.47-10.33-24.33-16.02-39.04-16.02-14.85 0-28.81 5.78-39.31 16.29l-32.69 32.68v-193.37c0-30.88-25.12-56-56-56s-56 25.12-56 56v193.37l-32.19-32.19c-10.5-10.5-25.09-16.51-40.05-16.51h-.19c-14.94.05-28.84 5.84-39.15 16.29-10.33 10.47-16.02 24.33-16.02 39.04 0 14.85 5.78 28.81 16.29 39.31l134.78 134.79c8.97 8.97 20.75 13.45 32.53 13.45s23.56-4.48 32.53-13.45l134.29-134.29c10.54-10.54 16.56-25.21 16.51-40.24-.05-14.94-5.84-28.84-16.29-39.15z"/></g>
-                        </svg>
-                    </a>
-                    <a target="_blank" href="https://github.com/JamesTedesco">
-                        <img src="/assets/icons/github.svg" alt="Github icon"></a>
-                    <a target="_blank" href="https://twitter.com/JamesT802">
-                        <img src="/assets/icons/twitter.svg" alt="Twitter icon"></a>
-                    <a href="#contact">
-                        <img src="/assets/icons/mail.svg" alt="Email icon"></a>
-                </div>
-            </div>
-
-        </header>
-        <script>
-            // reveals picture all at once rather than allowing a staggered load.
-            let img = document.getElementById('portrait')
-            img.onload = () => img
-                .classList
-                .add('visible')
-        </script>
-    </body>
-</html>
+</header>

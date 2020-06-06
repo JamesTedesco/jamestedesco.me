@@ -5,6 +5,9 @@ function main() {
     // size portrait on mobile
     sizePortraitOnMobile()
 
+    // load portrait when it's ready
+    loadPortrait()
+
     // nudge the user if they're not scrolling
     checkInitialScroll()
 
@@ -12,7 +15,6 @@ function main() {
     checkSubmissionStatus()
     successStatus()
 
-    console.log('inside, thanks')
 }
 
 // indicate successful submission of contact form
@@ -59,7 +61,7 @@ function sizePortraitOnMobile() {
     window.addEventListener('resize', reportWindowSize);
     window.addEventListener('load', reportWindowSize)
 
-    function reportWindowSize(e) {
+    function reportWindowSize() {
         // get window height from event
         let windowHeight = window.innerHeight
         let windowWidth = window.innerWidth
@@ -69,7 +71,7 @@ function sizePortraitOnMobile() {
         let headerHeight = header.offsetHeight
 
         if (headerHeight > windowHeight) {
-            console.log('hit')
+            // console.log('header height exceeds window height')
         }
 
 
@@ -110,44 +112,60 @@ function headerTooTall() {
 
 
 
-    function checkInitialScroll() {
+function checkInitialScroll() {
 
-        // prevent listener if already loaded past splash screen
-        // if (window.location.href != "https://www.jamestedesco.me/") { return }
+    // prevent listener if already loaded past splash screen
+    // if (window.location.href != "https://www.jamestedesco.me/") { return }
 
-        console.log('recognized location')
+    console.log('recognized location')
 
-        // listener type, function receiving notification, param options
-        window.addEventListener("scroll", runOnScroll, { passive: true });
-
-
-        // find arrow element
-        let arrow = document.getElementById('nudge-arrow')
+    // listener type, function receiving notification, param options
+    window.addEventListener("scroll", runOnScroll, { passive: true });
 
 
-        // set default state
-        let hasScrolled = false
-
-        function runOnScroll(evt) {
-            // indicate when scrolling has occured
-            hasScrolled = true
-
-            // reset arrow state if possible
-            arrow.classList.remove('reveal-arrow')
-        };
+    // find arrow element
+    let arrow = document.getElementById('nudge-arrow')
 
 
-        window.setTimeout(() => {
+    // set default state
+    let hasScrolled = false
 
-            // nudge user after waiting
-            if (hasScrolled == false) {
-                // show down-arrow
-                arrow.classList.add('reveal-arrow')
+    function runOnScroll(evt) {
+        // indicate when scrolling has occured
+        hasScrolled = true
 
-            }
-        }, 8000)
-
-
+        // reset arrow state if possible
+        arrow.classList.remove('reveal-arrow')
+    };
 
 
-    }  
+    window.setTimeout(() => {
+
+        // nudge user after waiting
+        if (hasScrolled == false) {
+            // show down-arrow
+            arrow.classList.add('reveal-arrow')
+
+        }
+    }, 8000)
+}
+
+
+// reveals picture all at once rather than allowing a staggered load.
+function loadPortrait() {
+
+    let img = document.getElementById('portrait')
+
+    // check status every tenth of a second
+    let portraitInterval = window.setInterval(() => {
+        console.log('The portrait is ready:', img.complete)
+        if (img.complete) {
+            img
+                .classList
+                .add('visible')
+
+            clearInterval(portraitInterval)
+            console.log('Portrait loaded!')
+        }
+    }, 50)
+}
