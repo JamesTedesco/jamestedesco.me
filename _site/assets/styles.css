@@ -104,13 +104,15 @@ section {
     overflow        : hidden;
     display         : flex;
     justify-content : space-around;
-    min-height      : 100vh;
+    max-height      : 100vh;
     margin-bottom   : 70px;
 }
 
 #portrait-link {
     display    : flex;
     align-items: flex-end;
+    overflow   : hidden;
+    min-width: fit-content;
 }
 
 .portrait-img {

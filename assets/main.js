@@ -83,7 +83,7 @@ function sizePortraitOnMobile() {
 
             console.log('small screen')
 
-            // find wrapper height
+            // find the height of the splash screen
             let introWrapper = document.getElementById('intro-wrapper')
             let boxHeight = introWrapper.offsetHeight
             let computedStyles = getComputedStyle(introWrapper)
@@ -91,16 +91,24 @@ function sizePortraitOnMobile() {
             let marginRight = parseInt(computedStyles.marginRight)
             let wrapperHeight = boxHeight + marginLeft + marginRight
 
-
+            // calculate height for portrait
             let correctedHeight = windowHeight - wrapperHeight
-            let portrait = document.getElementById('portrait')
+            let portrait = document.getElementById('portrait-link')
+            let portraitImg = document.getElementById('portrait')
+
+
+            // set heights
             portrait.style.height = correctedHeight
+            portraitImg.style.height = "96%"
 
         } else {
             console.log('larger screen')
-            let portrait = document.getElementById('portrait')
+            let portrait = document.getElementById('portrait-link')
+            let portraitImg = document.getElementById('portrait')
 
+            // on larger screens, make sure this inline styling is absent
             portrait.removeAttribute('style')
+            portraitImg.removeAttribute('style')
         }
     }
 }
