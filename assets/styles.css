@@ -376,4 +376,8 @@ label * {
         margin-left: 0;
     }
 
+    .simple-list {
+        padding-left: 30px;
+    }
+
 }
