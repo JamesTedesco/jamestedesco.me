@@ -1,10 +1,10 @@
 .experience-level {
     background-color: #FF9A36;
-    color: white;
-    width: fit-content;
-    font-weight: bolder;
-    padding: 10px;
-    transform: rotate(-270deg) translate(0, -100%);
+    color           : white;
+    width           : fit-content;
+    font-weight     : bolder;
+    padding         : 10px;
+    transform       : rotate(-270deg) translate(0, -100%);
     transform-origin: left top;
 }
 
@@ -13,24 +13,27 @@ hr {
     border-top: 2px dashed black;
 }
 
-.icons-list {
-    display        : flex;
-    justify-content: space-around;
-    flex-wrap      : wrap;
-}
-
 .simple-list {
-    padding-left: 60px;
+    padding-left  : 60px;
     padding-bottom: 20px;
 }
 
 .simple-list li {
-    margin: 20px 0;
+    margin     : 20px 0;
     line-height: 1.6em;
+}
+
+.icons-list {
+    display        : flex;
+    justify-content: space-around;
+    flex-wrap      : wrap;
+    padding: 0;
 }
 
 .icons-list li {
     list-style: none;
+    flex      : 1;
+    text-align: center;
 }
 
 .icon-item {
@@ -64,6 +67,10 @@ hr {
     font-weight     : initial;
     padding         : 5px 15px;
     margin          : 0;
+}
+
+.card-content .icons-list{
+    padding: 20px;
 }
 
 .text-in-card {
