@@ -154,18 +154,24 @@ function checkInitialScroll() {
 // reveals picture all at once rather than allowing a staggered load.
 function loadPortrait() {
 
-    let img = document.getElementById('portrait')
+    // fetch image
+    let img = new Image();
+    img.classList.add('portrait-img')
+    img.id = 'portrait'
+    img.src = "https://www.jamestedesco.me/assets/myself.png"
 
-    // check status every tenth of a second
-    let portraitInterval = window.setInterval(() => {
-        console.log('The portrait is ready:', img.complete)
-        if (img.complete) {
-            img
-                .classList
-                .add('visible')
+    // this placeholder is 14x smaller than the portrait we're injecting
+    let placeholder = document.getElementById('portrait')
 
-            clearInterval(portraitInterval)
-            console.log('Portrait loaded!')
-        }
-    }, 50)
+    // detect img loaded in JS
+    img.onload = () => {
+
+        // replace in DOM
+        placeholder.replaceWith(img)
+        
+        // slight delay to allow transition detection
+        window.setTimeout(() => {
+            img.classList.add('visible')
+        }, 10)
+    }
 }
