@@ -112,7 +112,7 @@ section {
     display    : flex;
     align-items: flex-end;
     overflow   : hidden;
-    min-width: fit-content;
+    min-width  : fit-content;
 }
 
 .portrait-img {
@@ -336,6 +336,10 @@ label * {
 
     .contact-info-wrapper img {
         height: 65px;
+    }
+
+    #portrait {
+        height: 50vh;
     }
 
     img.visible {
