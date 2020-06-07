@@ -180,6 +180,6 @@ function loadPortrait() {
         // slight delay to allow transition detection
         window.setTimeout(() => {
             img.classList.add('visible')
-        }, 10)
+        }, 100)
     }
 }
