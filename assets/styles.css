@@ -104,7 +104,7 @@ section {
     overflow        : hidden;
     display         : flex;
     justify-content : space-around;
-    max-height      : 100vh;
+    height          : 100vh;
     margin-bottom   : 70px;
 }
 
@@ -125,7 +125,7 @@ section {
     margin-right: auto;
     transform   : translateY(100px);
     transition  : all 2s ease;
-    margin-top: 25;
+    margin-top  : 25;
 }
 
 #nudge-arrow {
