@@ -87,9 +87,9 @@ function sizePortraitOnMobile() {
             let introWrapper = document.getElementById('intro-wrapper')
             let boxHeight = introWrapper.offsetHeight
             let computedStyles = getComputedStyle(introWrapper)
-            let marginLeft = parseInt(computedStyles.marginLeft)
-            let marginRight = parseInt(computedStyles.marginRight)
-            let wrapperHeight = boxHeight + marginLeft + marginRight
+            let marginTop = parseInt(computedStyles.marginTop)
+            let marginBottom = parseInt(computedStyles.marginBottom)
+            let wrapperHeight = boxHeight + marginTop + marginBottom
 
             // calculate height for portrait
             let correctedHeight = windowHeight - wrapperHeight
