@@ -63,8 +63,8 @@ function sizePortraitOnMobile() {
 
     function reportWindowSize() {
         // get window height from event
-        let windowHeight = window.innerHeight
-        let windowWidth = window.innerWidth
+        let windowHeight = document.documentElement.clientHeight
+        let windowWidth = document.documentElement.clientWidth
 
 
         let header = document.getElementById('home')
@@ -102,11 +102,9 @@ function sizePortraitOnMobile() {
         } else {
             console.log('larger screen')
             let portrait = document.getElementById('portrait-link')
-            let portraitImg = document.getElementById('portrait')
 
             // on larger screens, make sure this inline styling is absent
             portrait.removeAttribute('style')
-            portraitImg.removeAttribute('style')
         }
     }
 }
