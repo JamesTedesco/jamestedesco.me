@@ -115,6 +115,11 @@ section {
     min-width  : fit-content;
 }
 
+.pre-portrait {
+    height       : calc(100% - 25px);
+    padding-right: calc(57vh - 25px);
+}
+
 .portrait-img {
     height      : calc(100vh - 25px);
     display     : block;
@@ -331,7 +336,7 @@ label * {
     }
 
     .header-card {
-        flex-direction: column-reverse;
+        flex-direction : column-reverse;
         justify-content: space-between;
     }
 

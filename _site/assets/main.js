@@ -164,14 +164,16 @@ function loadPortrait() {
     img.id = 'portrait'
     img.src = "https://www.jamestedesco.me/assets/myself.png"
 
-    // this placeholder is 14x smaller than the portrait we're injecting
-    let placeholder = document.getElementById('portrait')
+    // remove the temporary classs
+    let portraitLink = document.getElementById('portrait-link')
 
     // detect img loaded in JS
     img.onload = () => {
 
+        portraitLink.classList.remove('pre-portrait')
+
         // replace in DOM
-        placeholder.replaceWith(img)
+        portraitLink.appendChild(img)
         
         // slight delay to allow transition detection
         window.setTimeout(() => {
