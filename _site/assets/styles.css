@@ -365,6 +365,10 @@ label * {
         line-height: 1.2em;
     }
 
+    div#intro-wrapper * {
+        margin: 5px 0;
+    }
+
     .section-header svg {
         height: 1em;
     }
