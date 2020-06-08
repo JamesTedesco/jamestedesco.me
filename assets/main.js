@@ -94,12 +94,10 @@ function sizePortraitOnMobile() {
             // calculate height for portrait
             let correctedHeight = windowHeight - wrapperHeight
             let portrait = document.getElementById('portrait-link')
-            let portraitImg = document.getElementById('portrait')
 
 
             // set heights
             portrait.style.height = correctedHeight
-            portraitImg.style.height = "96%"
 
         } else {
             console.log('larger screen')

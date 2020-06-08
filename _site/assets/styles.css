@@ -332,6 +332,7 @@ label * {
 
     .header-card {
         flex-direction: column-reverse;
+        justify-content: space-between;
     }
 
     .contact-info-wrapper img {
@@ -339,7 +340,7 @@ label * {
     }
 
     #portrait {
-        height: 50vh;
+        height: 100%;
     }
 
     img.visible {
