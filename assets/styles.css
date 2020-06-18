@@ -23,7 +23,8 @@ h1 {
 
 /* section styles */
 h2 {
-    margin: 0;
+    margin : 0;
+    display: inline-block;
 }
 
 
