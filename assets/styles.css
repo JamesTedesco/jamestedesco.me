@@ -101,20 +101,21 @@ section {
 
 
 .header-card {
-    background-color: #F9E3B5;
-    box-shadow      : 0px 6px 20px 23px #EBCA84;
-    overflow        : hidden;
-    display         : flex;
-    justify-content : space-around;
-    height          : 100vh;
-    margin-bottom   : 70px;
+    background-color   : #F9E3B5;
+    box-shadow         : 0px 6px 20px 23px #EBCA84;
+    /* overflow        : hidden; */
+    display            : flex;
+    justify-content    : space-around;
+    height             : 100vh;
+    margin-bottom      : 70px;
 }
 
 #portrait-link {
-    display    : flex;
-    align-items: flex-end;
-    overflow   : hidden;
-    min-width  : fit-content;
+    display        : flex;
+    align-items    : flex-end;
+    justify-content: center;
+    overflow       : hidden;
+    min-width      : fit-content;
 }
 
 .pre-portrait {
@@ -123,16 +124,15 @@ section {
 }
 
 .portrait-img {
-    height      : calc(100vh - 25px);
-    display     : block;
+    height    : calc(100vh - 25px);
+    display   : block;
     /* change on-load */
-    visibility  : hidden;
-    opacity     : 0;
-    margin-left : auto;
-    margin-right: auto;
-    transform   : translateY(100px);
-    transition  : all 2s ease;
-    margin-top  : 25;
+    visibility: hidden;
+    opacity   : 0;
+    transform : translateY(100px);
+    transition: all 2s ease;
+    margin-top: 25;
+    max-width      : 100%;
 }
 
 #nudge-arrow {
