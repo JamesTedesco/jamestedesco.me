@@ -32,9 +32,10 @@ h2 {
     align-items            : center;
     width                  : fit-content;
     font-size              : 2em;
-    background             : -webkit-linear-gradient(12deg, #ff9c08, #ffb52d);
+    background             : linear-gradient(12deg, #ff9c08, #ffb52d);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip        : text;
+    color                  : transparent;
     text-decoration        : none;
     font-weight            : bolder;
     margin-top             : 30px;
@@ -265,7 +266,7 @@ label {
 .identifying-input input {
     padding      : 5px 10px;
     border-radius: 5px;
-    max-width        : 100%;
+    max-width    : 100%;
 }
 
 .identifying-input {
