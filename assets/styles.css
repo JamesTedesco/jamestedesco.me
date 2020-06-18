@@ -263,10 +263,10 @@ label {
     padding       : 20px;
 }
 
-label * {
+.identifying-input input {
     padding      : 5px 10px;
     border-radius: 5px;
-    width        : 100%;
+    max-width        : 100%;
 }
 
 .identifying-input {
@@ -280,7 +280,7 @@ label * {
 
 .form-textarea {
     min-height: 150px;
-    width     : 100% !important;
+    max-width : 100%;
 }
 
 .submit-btn {
