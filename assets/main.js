@@ -3,7 +3,7 @@ main()
 function main() {
 
     // size portrait on mobile
-    sizePortraitOnMobile()
+    // sizePortraitOnMobile()
 
     // load portrait when it's ready
     loadPortrait()
@@ -107,11 +107,6 @@ function sizePortraitOnMobile() {
             portrait.removeAttribute('style')
         }
     }
-}
-
-
-function headerTooTall() {
-
 }
 
 

@@ -114,8 +114,7 @@ section {
     display        : flex;
     align-items    : flex-end;
     justify-content: center;
-    overflow       : hidden;
-    min-width      : fit-content;
+    height         : 100%;
 }
 
 .pre-portrait {
@@ -132,7 +131,8 @@ section {
     transform : translateY(100px);
     transition: all 2s ease;
     margin-top: 25;
-    max-width      : 100%;
+    max-width : 100%;
+    max-height: -webkit-fill-available;
 }
 
 #nudge-arrow {
