@@ -335,6 +335,10 @@ label {
         font-size: 2em;
     }
 
+    .general-intro-wrapper * {
+        margin: 2px 0;
+    }
+
     .header-card {
         flex-direction : column-reverse;
         justify-content: space-between;
@@ -368,10 +372,6 @@ label {
     .intro-text-wrapper {
         font-size  : 1em;
         line-height: 1.2em;
-    }
-
-    div#intro-wrapper * {
-        margin: 5px 0;
     }
 
     .section-header svg {
