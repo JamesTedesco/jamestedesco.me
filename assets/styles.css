@@ -336,6 +336,11 @@ label {
         font-size: 2em;
     }
 
+    .general-intro-wrapper * {
+        padding: 2px 0;
+        margin : 0;
+    }
+
     .header-card {
         flex-direction : column-reverse;
         justify-content: space-between;
