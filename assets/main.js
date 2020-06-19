@@ -2,8 +2,9 @@ main()
 
 function main() {
 
-    // size portrait on mobile
-    // sizePortraitOnMobile()
+    // animate section loading
+    animateSectionLoading()
+
 
     // load portrait when it's ready
     loadPortrait()
@@ -16,6 +17,52 @@ function main() {
     successStatus()
 
 }
+
+
+
+function animateSectionLoading() {
+
+    // get all sections by tag
+    let sections = document.querySelectorAll('section')
+
+    // run when intersecting with section
+    let callback = (sections, observer) => {
+        sections.forEach(section => {
+
+
+            // get child div for animation, since the observer should still be tethered to the end position of the element, shown here by the section
+            let animationElm = section.target.firstChild.nextElementSibling
+
+            // get all CSS properties
+            let animationProperties = window.getComputedStyle(animationElm)
+
+            // boolean for if visible
+            let pendingAnimation = animationProperties.getPropertyValue('opacity') == 0
+
+            // if intersecting with window & not visible (opacity == 0)
+            if (section.isIntersecting && pendingAnimation) {
+
+                // add the default position styling, which will make everything fly in
+                animationElm.classList.add('animate-entry')
+            }
+
+        });
+    };
+
+    // inter-observer requires pixels for the rootMargin option, so this grabs 20% of the viewport height in px
+    let thirtyPercentVH = window.innerHeight * .2
+
+    // instatiate the observer listener
+    let observer = new IntersectionObserver(callback, { rootMargin: `0px 0px -${thirtyPercentVH.toString()}px 0px` });
+
+    // apply the observer to every section
+    sections.forEach(section => {
+        observer.observe(section)
+    })
+
+}
+
+
 
 // indicate successful submission of contact form
 function successStatus() {
@@ -169,7 +216,7 @@ function loadPortrait() {
 
         // replace in DOM
         portraitLink.appendChild(img)
-        
+
         // slight delay to allow transition detection
         window.setTimeout(() => {
             img.classList.add('visible')

@@ -9,6 +9,7 @@ body {
     height         : 100vh;
     font-family    : "Fira Code", sans-serif;
     scroll-behavior: smooth;
+    overflow-x     : hidden;
 }
 
 body {
@@ -96,7 +97,20 @@ a {
 }
 
 section {
-    margin: 70px 0;
+    margin    : 40px 0;
+}
+
+.pre-entry {
+    /* pre-render styles */
+    transition: all 1s ease;
+    opacity   : 0;
+    transform: translate(500px, 20px) scale(.5) rotate(-45deg);
+}
+
+/* normal-view styles */
+.animate-entry {
+    opacity  : 1;
+    transform: translate(0) scale(1) rotate(0);
 }
 
 

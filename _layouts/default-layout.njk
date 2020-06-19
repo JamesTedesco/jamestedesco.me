@@ -46,90 +46,100 @@
     {# Styling home page here #}
 
     <body>
-
         {% include "_head.html" %}
 
         <div class="container">
 
             <section id="biography">
-                <a class="section-header" href="#biography">
-                    <h2>Bio</h2>
-                    {% include "icons/chain-link.svg" %}
-                </a>
-                <article class="text-section">
-                    <p>I'm a born and raised Vermonter, currently in my junior year at the
-                        <span>University of Vermont</span>
-                        where I'm studying political science and French. After class, I can be found at practice with the Lawrence Debate Union or representing UVM's chapter of the Yale-founded, <span><a class="link" target="_blank" href="https://www.evcnational.org/blogpost/jumpstarting-our-campus-presence-with-time-off-to-vote">"Every Vote Counts"</a></span>.</p>
-                    <p>Web-development has really taken my heart; its sharability and strong community make it for me. I'm interested in using the
-                        <span>JAMstack</span>
-                        and focusing on user experience.</p>
-                    <p>If you'd like to make something happen, definitely
-                        <span>
-                            <a class="link" href="#contact">reach out!</a></span></p>
-                </article>
+
+                <div class="pre-entry">
+                    <a class="section-header" href="#biography">
+                        <h2>Bio</h2>
+                        {% include "icons/chain-link.svg" %}
+                    </a>
+                    <article class="text-section">
+                        <p>I'm a born and raised Vermonter, currently in my junior year at the
+                            <span>University of Vermont</span>
+                            where I'm studying political science and French. After class, I can be found at practice with the Lawrence Debate Union or representing UVM's chapter of the Yale-founded,
+                            <span>
+                                <a class="link" target="_blank" href="https://www.evcnational.org/blogpost/jumpstarting-our-campus-presence-with-time-off-to-vote">"Every Vote Counts"</a>
+                            </span>.</p>
+                        <p>Web-development has really taken my heart; its sharability and strong community make it for me. I'm interested in using the
+                            <span>JAMstack</span>
+                            and focusing on user experience.</p>
+                        <p>If you'd like to make something happen, definitely
+                            <span>
+                                <a class="link" href="#contact">reach out!</a></span></p>
+                    </article>
+
+                </div>
             </section>
 
             <section id="summary">
-                <a class="section-header" href="#summary">
-                    <h2>Summary</h2>
-                    {% include "icons/chain-link.svg" %}
-                </a>
-                {# Build cards #}
-                {%- for card in collections.card -%}
-                    <article class="card">
-                        <h3 class="card-subject">{{card.data.title}}</h3>
-                        <div class="card-content">
-                            {{ card.data.content | safe }}
-                        </div>
-                    </article>
-                {%- endfor -%}
+                <div class="pre-entry">
+                    <a class="section-header" href="#summary">
+                        <h2>Summary</h2>
+                        {% include "icons/chain-link.svg" %}
+                    </a>
+                    {# Build cards #}
+                    {%- for card in collections.card -%}
+                        <article class="card">
+                            <h3 class="card-subject">{{card.data.title}}</h3>
+                            <div class="card-content">
+                                {{ card.data.content | safe }}
+                            </div>
+                        </article>
+                    {%- endfor -%}
+                </div>
             </section>
             <section id="contact">
-                <a class="section-header" href="#contact">
-                    <h2>Contact</h2>
-                    {% include "icons/chain-link.svg" %}
-                </a>
-                <article class="text-section">
-                    <ul class="icons-list">
-                        <li>
-                            <a class="icon-item link" target="_blank" href="https://github.com/JamesTedesco">
-                                <img src="/assets/icons/github.svg" alt="">
-                                <div>/JamesTedesco</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-item link" target="_blank" href="mailto:JamesTedesco802@gmail.com">
-                                <img src="/assets/icons/mail.svg" alt="">
-                                <div>JamesTedesco802@gmail.com</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-item link" target="_blank" href="https://twitter.com/JamesT802">
-                                <img src="/assets/icons/twitter.svg" alt="">
-                                <div>@JamesT802</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-item link" target="_blank" href="https://www.strava.com/athletes/JamesTedesco">
-                                <img src="/assets/icons/strava.svg" alt="">
-                                <div>/JamesTedesco</div>
-                            </a>
-                        </li>
-                    </ul>
-                </article>
-                <div id="successMsg">Your submission was received!</div>
-                <article class="form-wrapper">
-                    <form id='form' class="contact-form" name="contact" method="POST" data-netlify="true" action="/#contact">
-                        <label class='identifying-input'>Your Name:
-                            <input type="text" name="name" placeholder="ex. John Mayer"/></label>
-                        <label class='identifying-input'>Your Email:
-                            <input type="email" name="email" placeholder="ex. JohnMayer@gmail.com"/></label>
-                        <label class="form-message">Message:
-                            <textarea class="form-textarea" name="message" placeholder="ex. 'I love your site! Could you make me one?'"></textarea>
-                        </label>
-                        <button class="submit-btn" type="submit">Submit</button>
-                    </form>
-                </article>
+                <div class="pre-entry">
+                    <a class="section-header" href="#contact">
+                        <h2>Contact</h2>
+                        {% include "icons/chain-link.svg" %}
+                    </a>
+                    <article class="text-section">
+                        <ul class="icons-list">
+                            <li>
+                                <a class="icon-item link" target="_blank" href="https://github.com/JamesTedesco">
+                                    <img src="/assets/icons/github.svg" alt="">
+                                    <div>/JamesTedesco</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-item link" target="_blank" href="mailto:JamesTedesco802@gmail.com">
+                                    <img src="/assets/icons/mail.svg" alt="">
+                                    <div>JamesTedesco802@gmail.com</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-item link" target="_blank" href="https://twitter.com/JamesT802">
+                                    <img src="/assets/icons/twitter.svg" alt="">
+                                    <div>@JamesT802</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-item link" target="_blank" href="https://www.strava.com/athletes/JamesTedesco">
+                                    <img src="/assets/icons/strava.svg" alt="">
+                                    <div>/JamesTedesco</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                    <div id="successMsg">Your submission was received!</div>
+                    <article class="form-wrapper">
+                        <form id='form' class="contact-form" name="contact" method="POST" data-netlify="true" action="/#contact">
+                            <label class='identifying-input'>Your Name:
+                                <input type="text" name="name" placeholder="ex. John Mayer"/></label>
+                            <label class='identifying-input'>Your Email:
+                                <input type="email" name="email" placeholder="ex. JohnMayer@gmail.com"/></label>
+                            <label class="form-message">Message:
+                                <textarea class="form-textarea" name="message" placeholder="ex. 'I love your site! Could you make me one?'"></textarea>
+                            </label>
+                            <button class="submit-btn" type="submit">Submit</button>
+                        </form>
+                    </article>
+                </div>
             </section>
         </div>
         <script src="/assets/main.js"></script>
