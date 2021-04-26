@@ -126,12 +126,10 @@ section {
 }
 
 #portrait-link {
-    position       : relative;
-    display        : flex;
-    align-items    : flex-end;
-    justify-content: center;
-    height         : 100%;
-}
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+} 
 
 .pre-portrait {
     height       : calc(100% - 25px);
@@ -139,16 +137,7 @@ section {
 }
 
 .portrait-img {
-    height    : calc(100vh - 25px);
-    display   : block;
-    /* change on-load */
-    visibility: hidden;
-    opacity   : 0;
-    transform : translateY(100px);
-    transition: all 2s ease;
-    margin-top: 25px;
-    max-height: -webkit-fill-available;
-    object-fit: contain;
+        object-fit: contain;
 }
 
 #nudge-arrow {
@@ -367,10 +356,6 @@ label {
 
     .contact-info-wrapper img {
         height: 65px;
-    }
-
-    #portrait {
-        height: 100%;
     }
 
     img.visible {
