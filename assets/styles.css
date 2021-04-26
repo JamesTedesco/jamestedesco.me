@@ -126,8 +126,11 @@ section {
 }
 
 #portrait-link {
-    position: relative;
-    height: -webkit-fill-available;
+    position       : relative;
+    display        : flex;
+    align-items    : flex-end;
+    justify-content: center;
+    height         : 100%;
 }
 
 .pre-portrait {
@@ -136,6 +139,7 @@ section {
 }
 
 .portrait-img {
+    height    : calc(100vh - 25px);
     display   : block;
     /* change on-load */
     visibility: hidden;
@@ -143,14 +147,8 @@ section {
     transform : translateY(100px);
     transition: all 2s ease;
     margin-top: 25px;
-}
-
-#portrait {
-    position: absolute;
-    height: -webkit-fill-available;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    max-height: -webkit-fill-available;
+    object-fit: contain;
 }
 
 #nudge-arrow {
