@@ -128,7 +128,6 @@ section {
 #portrait-link {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
         overflow: hidden;
 } 
 
@@ -336,6 +335,12 @@ label {
 @media only screen and (min-width: 1600px) {
     .header-card {
         padding: 0 10%;
+    }
+}
+
+@media only screen and (min-width: 730px) {
+    .portrait-link {
+        align-items: flex-end;
     }
 }
 
