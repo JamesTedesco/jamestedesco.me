@@ -137,7 +137,13 @@ section {
 }
 
 .portrait-img {
-        object-fit: contain;
+    object-fit: contain;
+    margin-top: 25px;
+    /* change on-load */
+    visibility: hidden;
+    opacity   : 0;
+    transform : translateY(100px);
+    transition: all 2s ease;
 }
 
 #nudge-arrow {
